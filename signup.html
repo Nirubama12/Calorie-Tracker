@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+    <head> 
+        <title>Sign up</title>
+        <link rel="stylesheet" type="text/css" href="login.css">
+    </head>
+
+    <body>
+        <form>
+            <table>
+                <th colspan="2">Fill the details for sign up</th>
+                <tr>
+                    <td><label for="uname">Name</label>
+                    <td><input type="text" id="uname" placeholder="enter your name" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="uage">Age</label></td>
+                    <td><input type="number" id="uage" min="18" max="90" placeholder="enter your age" style="width: 96%;" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="uht">Height</label></td>
+                    <td><input type="number" id="uht" placeholder="enter your height in cm" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="uwt">weight</label></td>
+                    <td><input type="number" id="uwt" placeholder="enter your weight in kgs" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="mail">Email ID</label></td>
+                    <td><input type="email" id="mail" placeholder="enter your email ID" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="user">Username</label></td>
+                    <td><input type="text" id="user" placeholder="enter the username" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="pass">Password</label></td>
+                    <td><input type="password" id="pass" placeholder="enter a password" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="gen">Gender</label></td>
+                    <td>
+                        <select name="gen" id="gen" style="width: 52%;" required>
+                            <option>--select--</option>
+                            <option value="Female">Female</option>
+                            <option value="Male">Male</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="role">Role</label></td>
+                    <td>
+                        <select name="role" id="role" required>
+                            <option>--select--</option>
+                            <option value="User">User</option>
+                            <option value="Nutritionist">Nutritionist</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><button type="submit" id="sub" onclick="">Sign Up</button></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

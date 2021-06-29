@@ -1,0 +1,81 @@
+/*background*/
+
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    height: 100%;
+    width: 100%;
+    /*background-image: url('bg.jpg');*/
+    background-image: linear-gradient(rgba(65, 65, 65, 0.4),rgba(71, 71, 71, 0.4)),url(bg.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    bottom: 2;
+}
+
+.bar{
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 30px;
+    padding-top: 50px;
+}
+
+nav{
+    flex: 1;
+    text-align: end;
+    background-color: rgba(78, 78, 78, 0.4);
+}
+nav:hover{
+    flex: 1;
+    text-align: end;
+    background-color: rgba(255, 180, 180, 0.4);
+    color: rgb(56, 91, 196);
+}
+nav ul{
+    display: inline-block;
+    list-style: none;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 70px;
+    color: rgb(255, 255, 255);
+    font-family: sans-serif;
+}
+nav ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    font-family: sans-serif;
+}
+nav ul li button{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-family: sans-serif;
+    background: palevioletred;
+}
+/*nav ul li button:hover{
+    color: palevioletred;
+    background-color: papayawhip;
+}*/
+nav ul li a:hover{
+    color: rgb(45, 105, 218);
+}
+a{
+    text-decoration: none;
+    color: rgb(202, 32, 89);
+    font-size: 28px;
+    font-family: Pumpkin Pancakes;
+    font-size: 60px;
+    
+}

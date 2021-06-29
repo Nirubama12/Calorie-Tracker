@@ -1,25 +1,60 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Login</title>
+
+        <title>Login/Sign Up</title>
+        <link rel="stylesheet" type="text/css" href="login.css">
+        
     </head>
 
     <body>
-        <form>
-            <table>
-                <th colspan="2">Login</th>
-                <tr>
-                    <td><label for="user">Username</label></td>
-                    <td><input type="text" id="user"></td>
-                </tr>
-                <tr>
-                    <td><label for="pass">Password</label></td>
-                    <td><input type="password" id="pass"></td>
-                </tr>
-                <tr>
-                    <td><button type="submit" id="sub">Login</button></td>
-                </tr>
-            </table>
-        </form>
+        <div class="main">
+            <div class="data">
+                <div class="box">
+                    <div id="but1"></div>
+                    <button type="button" class="togglebtn" onclick="Loginn()">Log In</button>
+                    <button type="button" class="togglebtn" onclick="Signin()">Sign Up</button>
+                </div>
+            
+            
+                <form id="login" class="inp">
+                    <input type="text" class="inputf" placeholder="enter your username" required>
+                    <input type="password" class="inputf" placeholder="enter your password" required>
+                    <button type="submit" class="sub">Login</button>
+                </form>
+
+                <form id="signup" class="inp">
+
+                    <input type="text" class="inputf" placeholder="enter your Name" required>
+                    <input type="number" class="inputf" id="uage" min="18" max="90" placeholder="enter your age" required>
+                    <input type="number" class="inputf" id="uht" placeholder="enter your height in cm" required>
+                    <input type="number" class="inputf" id="uwt" placeholder="enter your weight in kgs" required>
+                    <input type="email" class="inputf" id="mail" placeholder="enter your email ID" required>
+                    <input type="text" class="inputf" placeholder="enter your username" required>
+                    <input type="password" class="inputf" placeholder="enter your password" required>
+
+                    <button type="submit" class="sub">Login</button>
+
+                </form>
+            </div>  
+
+            <script>
+                var a = document.getElementById("login");
+                var b = document.getElementById("signup");
+                var c = document.getElementById("but1");
+    
+                function Signin(){
+                    a.style.left = "-400px";
+                    b.style.left = "50px";
+                    c.style.left = "110px";
+                }
+    
+                function Loginn(){
+                    a.style.left = "50px";
+                    b.style.left = "450px";
+                    c.style.left = "0px";
+                }
+            </script>
+        </div>
     </body>
 </html>

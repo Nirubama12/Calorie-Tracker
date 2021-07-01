@@ -11,8 +11,8 @@ if(!$link)
     echo "Connection Failed.".mysqli_error($link);
 }
 
-$uname = $_POST['uname'];
-$pass = $_POST['pass'];
+$uname = $_POST["uname"];
+$pass = $_POST["pass"];
 
 $sql1 = "SELECT * FROM calorie WHERE username = $uname" ;
 
@@ -25,8 +25,11 @@ if(!$run)
 $row = mysqli_fetch_assoc($run);
 $pw = $row['password'];
 
-if($pass != $pw)
+if($pass == $pw)
 {
+    echo "success!";
+}
+else{
     echo "Please enter the correct password.";
 }
 

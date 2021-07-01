@@ -38,7 +38,7 @@ mysqli_close($link);
 ?>
 <html>
     <body>
-        <button type="submit" onclick="location.href='login.html'">Go to Login</button>
+        <button type="submit" onclick="location.href='ls.html'">Go to Login</button>
     </body>
 </html>
 

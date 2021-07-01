@@ -11,8 +11,7 @@ if(!$link)
     echo "Connection Failed.".mysqli_error($link);
 }
 
-else
-{
+
     $name = $_POST["fname"];
     $age = $_POST["age"];
     $height = $_POST["ht"];
@@ -22,17 +21,21 @@ else
     $pass = $_POST["pass"];
     $role = $_POST["role"];
 
-    $mysql1 = "INSERT * INTO details(name,age,height,weight,email,username,password,role) 
+    $sql1 = "INSERT INTO calorie(name,age,height,weight,email,username,password,role) 
     VALUES ('$name', '$age', '$height', '$weight', '$mail', '$uname', '$password', '$role')";
 
-    $run = mysqli_query($link, $mysql1);
+    $run = mysqli_query($link, $sql1);
 
-    if(! $run)
+    if($run)
     {
-        echo "Error occured".mysqli_error($run);
+        echo "success";
+    }
+    else
+    {
+        echo "error".mysqli_error($link);
     }
 
-}
+mysqli_close($link);
 ?>
 <html>
     <body><button type="submit" style="location.href: 'login.html'">Go to Login</button>

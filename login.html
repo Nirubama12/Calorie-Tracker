@@ -16,23 +16,30 @@
                     <button type="button" class="togglebtn" onclick="Signin()">Sign Up</button>
                 </div>
             
-            
+                <!--Form 1-->
+
                 <form id="login" class="inp">
                     <input type="text" class="inputf" placeholder="enter your username" required>
                     <input type="password" class="inputf" placeholder="enter your password" required>
                     <button type="submit" class="sub">Login</button>
                 </form>
 
-                <form id="signup" class="inp">
+                <!--form 2  table: sno, name, age, height, weight, email, username, password, role -->
+                
+                <form id="signup" class="inp" action="login.php" method="POST">
 
-                    <input type="text" class="inputf" placeholder="enter your Name" required>
-                    <input type="number" class="inputf" id="uage" min="18" max="90" placeholder="enter your age" required>
-                    <input type="number" class="inputf" id="uht" placeholder="enter your height in cm" required>
-                    <input type="number" class="inputf" id="uwt" placeholder="enter your weight in kgs" required>
+                    <input type="text" class="inputf" id="fname" placeholder="enter your Name" required>
+                    <input type="number" class="inputf" id="age" min="18" max="90" placeholder="enter your age" required>
+                    <input type="number" class="inputf" id="ht" placeholder="enter your height in cm" required>
+                    <input type="number" class="inputf" id="wt" placeholder="enter your weight in kgs" required>
                     <input type="email" class="inputf" id="mail" placeholder="enter your email ID" required>
-                    <input type="text" class="inputf" placeholder="enter your username" required>
-                    <input type="password" class="inputf" placeholder="enter your password" required>
-
+                    <input type="text" class="inputf" id="uname" placeholder="enter your username" required>
+                    <input type="password" class="inputf" id="pass" placeholder="enter your password" required>
+                    <select required class="inputf" id="role">
+                        <option value="" disabled selected hidden>Are you an User or Nutritionist?</option>
+                        <option value="0">User</option>
+                        <option value="1">Nutritionist</option>
+                    </select>
                     <button type="submit" class="sub">Sign Up</button>
 
                 </form>
@@ -58,3 +65,4 @@
         </div>
     </body>
 </html>
+

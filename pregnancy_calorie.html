@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style_sheet.css">
+</head>
+<body>
+    <div class ="main">
+        <h1> BMI Calculator</h1>
+    
+    <table>
+        <td><label for = "height">Height(in cm):</label></td>
+        <td><input type="number" id="height" name="height"  >
+        <br><br></td>
+        </tr>
+        <tr>
+        <td><label for="age">Weight(in kg):</label></td>
+        <td><input type = "number" id ="weight" name="weight" > <br><br></td>
+        </tr>
+        <tr>
+            <td colspan = "2" style = "font-size: large; padding-left:200px;" >Additional calorie consumption per day</td>
+        </tr>
+        <tr>
+        <td><label for="t1">Trimester 1:</label></td>
+        <td><input type = "text" id ="t1" name="t1" > <br><br></td>
+        </tr>
+        <tr>
+        <td><label for="t2">Trimester 2:</label></td>
+        <td><input type = "text" id ="t2" name="t2" > <br><br></td>
+        </tr>
+        <tr>
+        <td><label for="t3">Trimester 3:</label></td>
+        <td><input type = "text" id ="t3" name="t3" > <br><br></td>
+        </tr>
+        </table>
+        <button onclick = "calculate()"> calculate </button>
+    
+        <p> <a href = "calculators.html"> Back </a></p>
+    </div>
+        <script>
+            function calculate()
+            {
+            var H = Number(document.getElementById("height").value);
+            var W= Number(document.getElementById("weight").value);
+            var bmi;
+            var h = H/100;
+            
+            bmi = W/(h*h);
+            if(bmi < 18.5)
+            {
+                document.getElementById("t1").value = " Baseline 100 to 200"; 
+                document.getElementById("t2").value = " Baseline 300 to 400"; 
+                document.getElementById("t3").value = " Baseline 400 to 500"; 
+            }
+            else if(bmi >= 18.5 && bmi < 25)
+            {
+                document.getElementById("t1").value = " Baseline 0 to 100"; 
+                document.getElementById("t2").value = " Baseline 200 to 300"; 
+                document.getElementById("t3").value = " Baseline 350 to 450"; 
+            }
+            else if(bmi >= 25 && bmi < 30)
+            {
+                document.getElementById("t1").value = " 0 "; 
+                document.getElementById("t2").value = " Baseline 150 to 200"; 
+                document.getElementById("t3").value = " Baseline 250 to 350"; 
+            }
+            else if(bmi <= 30)
+            {
+                document.getElementById("t1").value = " 0"; 
+                document.getElementById("t2").value = " Baseline 100 to 200"; 
+                document.getElementById("t3").value = " Baseline 200 to 300"; 
+            }
+            else
+            {
+                alert("Please enter valid data");
+            }
+
+            }
+            
+        </script>
+</body>
+</html>

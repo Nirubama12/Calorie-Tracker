@@ -6,22 +6,63 @@
         <link type="text/css" rel="stylesheet" href="style.css"> 
     </head>
     <body>
-        <div class="header">
-            <div class="container">
-                <div class="navbar">
-                   <img src="fit.png" class="logo">
-                <nav>
-                    <ul>
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Signup</a></li>
-                        <li><a href="#">Services</a></li>
-                    </ul>
-                </nav>
+        <div class="wrapper">
+            <div class="leftcol">
+                <img src="fit.png" class="logo">
                 
+                <div class="content">
+                    <h1>Your Fitness Pal!</h1>
+                    <p>helooo</p>
+                    <button type="button">Sign up/ Login</button>
                 </div>
             </div>
-
+            <div class="rightcol">
+                <div class="slide" id="slide">
+                    <img src="bg.jpg">
+                </div>
+                <div class="slidecontent">
+                    <h2>How do i decide my calorie intake?</h2>
+                    <hr>
+                    <p>Why fear when fitnessive here? Calculate your calories and get 
+                        feedback from a nutritionist!!
+                    </p>
+                    <div class="controller">
+                        <img src="back.png" id="backbtn">
+                        <div class="verticalline"></div>
+                        <img src="next.png" id="nextbtn">
+                    </div>
+                </div>
+            </div>
         </div>
 
+        <script>
+            var Slide = document.getElementById("slide");
+            var Backbtn = document.getElementById("backbtn");
+            var Nextbtn = document.getElementById("nextbtn");
+
+            var slideimages = new Array(
+                "2.jpg",
+                "3.png",
+                "bg.jpg",
+            );
+
+            let i = 0;
+            Nextbtn.onclick = function(){
+
+                if(i<2){
+                    Slide.src = slideimages[i+1];
+                    i++;
+                }
+                
+            }
+
+            Backbtn.onclick = function(){
+            if(i>0){
+                    Slide.src = slideimages[i-1];
+                    i--;
+            }
+
+}
+        </script>
     </body>
 </html>

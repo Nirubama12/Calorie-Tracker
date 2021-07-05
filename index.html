@@ -17,13 +17,13 @@
                 </div>
             </div>
             <div class="rightcol">
-                <div class="slide" id="slide">
-                    <img src="bg.jpg">
+                <div class="slide" >
+                    <img src="bg.jpg" id="slide">
                 </div>
                 <div class="slidecontent">
                     <h2>How do i decide my calorie intake?</h2>
                     <hr>
-                    <p>Why fear when fitnessive here? Calculate your calories and get 
+                    <p>Why fear when fitnessive here? <br> Calculate your calories and get 
                         feedback from a nutritionist!!
                     </p>
                     <div class="controller">
@@ -31,40 +31,20 @@
                         <div class="verticalline"></div>
                         <img src="next.png" id="nextbtn" onclick="next()">
                         
-                        <script>
-                            /*var x = document.getElementById("backbtn");
-                            var y = document.getElementById("nextbtn");*/
-                            var z = document.getElementById("slide");
-
-                            function back(){
-                                if(z.getAttribute('src') == 'bg.jpg'){
-                                    z.setAttribute('src' , '2.jpg');
-                                }
-                                else if(z.getAttribute('src') == '2.jpg'){
-                                    z.setAttribute('src','3.pnj')
-                                }
-                                else{
-                                    z.setAttribute('src','bg.jpg');
-                                }
-                            }
-                        </script>
-
-
-
-
+                
                     </div>
                 </div>
             </div>
         </div>
-        <!--<script>
+        <script>
                             var Slide = document.getElementById("slide");
                             var Backbtn = document.getElementById("backbtn");
                             var Nextbtn = document.getElementById("nextbtn");
                 
                             var slideimages = new Array(
+                                "bg.jpg",
                                 "2.jpg",
                                 "3.png",
-                                "bg.jpg",
                             );
                 
                             let i = 0;
@@ -75,6 +55,7 @@
                                     i++;
                                 }
                                 
+                                
                             }
                 
                             Backbtn.onclick = function(){
@@ -84,7 +65,7 @@
                             }
                 
                             }
-                        </script>-->
+                        </script>
     
     </body>
 </html>

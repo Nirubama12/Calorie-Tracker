@@ -24,13 +24,30 @@ if(!$run)
 
 $row = mysqli_fetch_assoc($run);
 $pw = $row['password'];
+$un = $row['username'];
+$role = $row['role'];
 
 if($pass == $pw)
 {
     echo "success!";
 }
-else{
+/*else{
     echo "Please enter the correct password.";
+}*/
+
+else{
+    if($role == "User"){
+        session_start();
+        $_SESSION['username'] = $un;
+        $_SESSION['role'] = $row['role'];
+        echo '<meta http-equiv= "refresh" content="1; url=/Calorie-Tracker/calculators.html"/>';
+    }
+    else if($role == "Nutritionist"){
+        session_start();
+        $_SESSION['username'] = $un;
+        $_SESSION['role'] = $row['role'];
+        echo '<meta http-equiv= "refresh" content="1; url=/Calorie-Tracker/calculators.html"/>';
+    }
 }
 
 

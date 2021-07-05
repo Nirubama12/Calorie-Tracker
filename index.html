@@ -30,39 +30,47 @@
                         <img src="back.png" id="backbtn">
                         <div class="verticalline"></div>
                         <img src="next.png" id="nextbtn">
+
+
+                        <script>
+                            var Slide = document.getElementById("slide");
+                            var Backbtn = document.getElementById("backbtn");
+                            var Nextbtn = document.getElementById("nextbtn");
+                
+                            var slideimages = new Array(
+                                "2.jpg",
+                                "3.png",
+                                "bg.jpg",
+                            );
+                
+                            let i = 0;
+                            Nextbtn.onclick = function(){
+                
+                                if(i<2){
+                                    Slide.src = slideimages[i+1];
+                                    i++;
+                                }
+                                
+                            }
+                
+                            Backbtn.onclick = function(){
+                            if(i>0){
+                                    Slide.src = slideimages[i-1];
+                                    i--;
+                            }
+                
+                            }
+                        </script>
+
+
+
+
+
                     </div>
                 </div>
             </div>
         </div>
 
-        <script>
-            var Slide = document.getElementById("slide");
-            var Backbtn = document.getElementById("backbtn");
-            var Nextbtn = document.getElementById("nextbtn");
-
-            var slideimages = new Array(
-                "2.jpg",
-                "3.png",
-                "bg.jpg",
-            );
-
-            let i = 0;
-            Nextbtn.onclick = function(){
-
-                if(i<2){
-                    Slide.src = slideimages[i+1];
-                    i++;
-                }
-                
-            }
-
-            Backbtn.onclick = function(){
-            if(i>0){
-                    Slide.src = slideimages[i-1];
-                    i--;
-            }
-
-}
-        </script>
+    
     </body>
 </html>

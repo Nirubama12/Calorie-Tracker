@@ -27,12 +27,36 @@
                         feedback from a nutritionist!!
                     </p>
                     <div class="controller">
-                        <img src="back.png" id="backbtn">
+                        <img src="back.png" id="backbtn" onclick="back()">
                         <div class="verticalline"></div>
-                        <img src="next.png" id="nextbtn">
-
-
+                        <img src="next.png" id="nextbtn" onclick="next()">
+                        
                         <script>
+                            /*var x = document.getElementById("backbtn");
+                            var y = document.getElementById("nextbtn");*/
+                            var z = document.getElementById("slide");
+
+                            function back(){
+                                if(z.getAttribute('src') == 'bg.jpg'){
+                                    z.setAttribute('src' , '2.jpg');
+                                }
+                                else if(z.getAttribute('src') == '2.jpg'){
+                                    z.setAttribute('src','3.pnj')
+                                }
+                                else{
+                                    z.setAttribute('src','bg.jpg');
+                                }
+                            }
+                        </script>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<script>
                             var Slide = document.getElementById("slide");
                             var Backbtn = document.getElementById("backbtn");
                             var Nextbtn = document.getElementById("nextbtn");
@@ -60,17 +84,7 @@
                             }
                 
                             }
-                        </script>
-
-
-
-
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
+                        </script>-->
     
     </body>
 </html>

@@ -35,26 +35,24 @@ $role = $row['role'];
 
 if($pass == $pw)
 {
-    echo "success!";
+    echo "<h2>correct password</h2>";
 }
 /*else{
     echo "Please enter the correct password.";
 }*/
-
-else{
-    if($role == "User"){
+if($role == "User"){
         session_start();
         $_SESSION['username'] = $un;
         $_SESSION['role'] = $row['role'];
         echo '<meta http-equiv= "refresh" content="1; url=/Calorie-Tracker/calculators.html"/>';
-    }
-    else if($role == "Nutritionist"){
-        session_start();
-        $_SESSION['username'] = $un;
-        $_SESSION['role'] = $row['role'];
-        echo '<meta http-equiv= "refresh" content="1; url=/Calorie-Tracker/calculators.html"/>';
-    }
 }
+else if($role == "Nutritionist"){
+        session_start();
+        $_SESSION['username'] = $un;
+        $_SESSION['role'] = $row['role'];
+        echo '<meta http-equiv= "refresh" content="1; url=/Calorie-Tracker/calculators.html"/>';
+}
+
 
 
 

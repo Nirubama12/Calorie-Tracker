@@ -26,5 +26,7 @@ if(isset ($_POST['submit']))
 $conn->close();
 ?>
 
-<button onclick="location.href='https://localhost:4433/calorie-tracker/add-data.html'" type="button">
+<button onclick="location.href='add-data.html'" type="button">
          Add more Data</button>
+
+<button onclick="location.href='display-table.php'" type="button">Go to User page</button>

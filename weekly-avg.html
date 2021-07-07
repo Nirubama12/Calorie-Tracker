@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weekly Average</title>
+    <style type="text/css">
+      #chart-container {
+        width: 640px;
+        height: auto;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+      $.ajax({
+    url: "https://localhost:4433/calorie-tracker/barchart.php",
+    method: "GET",
+    datatype: "JSON",
+    success: function(data) {
+      console.log(data);
+      var cals =[];
+      var day=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+      var avg = 0;
+      for (var i in data){
+        var x = parseInt(data[i++]+data[i++]+data[i]);
+        if(x>data[i])
+        {
+        cals.push(x);
+        avg = avg + x;
+        }
+        i++;
+        }
+        avg = avg / 7;
+        document.getElementById("avg-disp").innerHTML = avg;
+       },
+
+      error: function(data) {
+      console.log(data);
+    }
+  });
+});
+    
+  </script>
+  </head>
+  <body>
+    <p>Your weekly average is :</p>
+    <p id="avg-disp" style="color:red;">
+    </p>
+  </body>
+</html>

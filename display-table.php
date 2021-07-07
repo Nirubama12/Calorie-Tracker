@@ -3,18 +3,12 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
- 
-
-</head>
+ </head>
 <body>
 
- 
+ <p>Click the buttons to create and delete row(s) for the table.</p>
 
-<p>Click the buttons to create and delete row(s) for the table.</p>
-
- 
-
-<form id="forms">
+ <form id="forms">
 <label for="name">Username:</label><br>
 <input type="text" id="uname" name="name"><br><br>
 <label for="name">Select Day:</label><br>
@@ -45,8 +39,6 @@
   die("Connection failed: " . $conn->connect_error);
   }
 
- 
-
   $sql = "SELECT * FROM calories";
   $result = mysqli_query($conn, $sql);
   while($row = mysqli_fetch_array($result))
@@ -60,9 +52,7 @@
 <button onclick="myCreateFunction()">Insert</button>
 <br><br>
 
- 
-
-<table id="myTable">
+ <table id="myTable">
   <tr>
     <td><b>Username</b></td>
     <td><b>Food</b></td>
@@ -72,24 +62,19 @@
 <br>
 <hr>
 
- 
-
-<p id="total"></p>
+ <p id="total"></p>
 <br><br>
 <button id="donebtn" onclick="storedaycal()">I am done for the day!</button>
 <br><br>
 <p id="idname1"></p>
 
- 
-
-<script>
+ <script>
   var sum = 0;
   var xvals = [];
   var yvals = [];
   var i = 0;
 
  
-
   function myCreateFunction() {
   var table = document.getElementById("myTable");
   var x = document.getElementById("myTable").rows.length;

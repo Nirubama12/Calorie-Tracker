@@ -10,10 +10,10 @@
   if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
   }
-  include 'storedaycal.php';
+  //include 'storedaycal.php';
 
   //chart for weekly calorie intake
-  $sql = "SELECT `sun`,`mon`,`tue`,`wed`,`thur`,`fri`,`sat` FROM `food` WHERE `username` = '$uname'";
+  $sql = "SELECT `sun`,`mon`,`tue`,`wed`,`thur`,`fri`,`sat` FROM `food` WHERE `username` = 'vrocks9'";
   $arr = ['sun','mon','tue','wed','thur','fri','sat'];
   $cals = array();
   $i = 0;

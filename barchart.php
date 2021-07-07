@@ -26,7 +26,7 @@
     $cals[3] = $row['wed'];
     $cals[4] = $row['thur'];
     $cals[5] = $row['fri'];
-    $cals[6] = $row['thur'];
+    $cals[6] = $row['sat'];
    }
 print(json_encode($cals));
 $conn->close();

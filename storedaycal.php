@@ -40,7 +40,7 @@ foreach ($result3 as $row) {
   $data[] = $row;
 }
 
-header("Location: https://localhost:4433/calorie-tracker/weekly-avg.html");
+header("Location: weekly-avg.html");
 exit();
 
 $conn->close();

@@ -152,6 +152,8 @@ function storedaycal()
 }
 
 </script>
+
+<button type="button" onclick="location.href='calculators.html'">Calculators!</button>
 </body>
 </html>
  

@@ -44,7 +44,7 @@ if($role == "User"){
         session_start();
         $_SESSION['username'] = $un;
         $_SESSION['role'] = $row['role'];
-        echo '<meta http-equiv= "refresh" content="1; url=/Calorie-Tracker/calculators.html"/>';
+        echo '<meta http-equiv= "refresh" content="1; url=/Calorie-Tracker/display-table.php"/>';
 }
 else if($role == "Nutritionist"){
         session_start();

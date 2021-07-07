@@ -2,19 +2,32 @@
 <html>
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<style>
-table, td {
-  border: 1px solid black;
-}
-</style>
+
+ 
+
 </head>
 <body>
 
+ 
+
 <p>Click the buttons to create and delete row(s) for the table.</p>
+
+ 
 
 <form id="forms">
 <label for="name">Username:</label><br>
 <input type="text" id="uname" name="name"><br><br>
+<label for="name">Select Day:</label><br>
+<select name="day" id="day">
+  <option value="sun">Sunday</option>
+  <option value="mon">Monday</option>
+  <option value="tue">Tuesday</option>
+  <option value="wed">Wednesday</option>
+  <option value="thur">Thursday</option>
+  <option value="fri">Friday</option>
+  <option value="sat">Saturday</option>
+</select>
+<br><br>
 <label for="foods">Select Food:</label>
 <select name="foods" id="foods" onchange="showCals(this.value)">
   <?php 
@@ -26,9 +39,13 @@ table, td {
   session_start();
   $conn = new mysqli($server, $user, $pass, $db);
 
+ 
+
   if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
   }
+
+ 
 
   $sql = "SELECT * FROM calories";
   $result = mysqli_query($conn, $sql);
@@ -41,8 +58,9 @@ table, td {
 </form> 
 <br><br>
 <button onclick="myCreateFunction()">Insert</button>
-<!-- <button onclick="myDeleteFunction()">Delete</button> -->
 <br><br>
+
+ 
 
 <table id="myTable">
   <tr>
@@ -54,15 +72,30 @@ table, td {
 <br>
 <hr>
 
+ 
+
 <p id="total"></p>
+<br><br>
+<button id="donebtn" onclick="storedaycal()">I am done for the day!</button>
+<br><br>
+<p id="idname1"></p>
+
+ 
 
 <script>
   var sum = 0;
+  var xvals = [];
+  var yvals = [];
+  var i = 0;
+
+ 
 
   function myCreateFunction() {
   var table = document.getElementById("myTable");
   var x = document.getElementById("myTable").rows.length;
   var idname = "id"+x;
+
+ 
 
   var row = table.insertRow(x);
   var food = document.getElementById("foods").value;
@@ -75,10 +108,14 @@ table, td {
   showCals(food, idname);
 } 
 
+ 
+
  function myDeleteFunction() {
    var x = document.getElementById("myTable").rows.length;
   document.getElementById("myTable").deleteRow(x);
 }
+
+ 
 
 function showCals(str,idname) {
   var xhttp;    
@@ -97,12 +134,24 @@ function showCals(str,idname) {
   xhttp.send();
 }
 
+ 
+
 function total(vals) {
   var x = parseInt(vals);
   sum = sum + x;
   document.getElementById("total").innerHTML = sum;
 }
-</script>
 
+ 
+
+function storedaycal()
+{
+  var day = document.getElementById("day").value;
+  var uname = document.getElementById("uname").value;
+  window.location='storedaycal.php?day='+day+'&sum='+sum+'&uname='+uname;
+}
+
+</script>
 </body>
 </html>
+ 

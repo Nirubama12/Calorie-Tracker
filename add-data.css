@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    align-items: center;
+    background: #d1ffe7;
+    color: rgba(0,0,0,.8);
+    display: grid;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    height: 100vh;
+    justify-items: center;
+    weight: 100vw;
+}
+.signup-container {
+    display: grid;
+    grid-template-areas: "left right";
+    max-width: 900px;
+}
+
+.left-container {
+    background: #6384e1;
+    overflow: hidden;
+    padding: 20px 20px 20px 20px;
+    position: relative;
+    text-align: center;
+    width: 300px;
+  
+ & h1{
+ display: inline-block;
+ font-size: 50px;
+ font-color:white;
+ 
+ 
+ & i{
+ background: #F7B1AB;
+ border-radius: 50%;
+ color:  #807182;
+ font-size: 24px;
+ margin-right: 5px;
+ padding: 10px;
+ transform: rotate(-45deg);
+ }
+}
+  
+    .fitness {
+        bottom: -5px;
+        position: absolute;
+        text-align: center;
+       background: #807182;
+       content: "";
+       height: 100%;
+       left: 0;
+       opacity: .4;
+       position: absolute;
+       width: 100%;
+       z-index: 1;
+       margin-top: 100px;
+     }
+  
+    
+    img {
+        filter: sepia(100%);
+    }
+}
+
+#tagline {
+    margin-top: 15%;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: left;
+}
+.right-container {
+    background: #ffdbde;
+    display: grid;
+    grid-template-areas: "." ".";
+    width: 500px;
+    padding : 30px,30px,30px,30px;
+  
+    & h1:nth-of-type(1) {
+        color:  rgba(0,0,0,.8);
+        font-size: 28px;
+        font-weight: 600;
+    }
+   
+    & input {
+      border: 1px solid rgba(0,0,0,.1);
+      border-radius: 4px;
+      height: 38px;
+      line-height: 38px;
+      padding-left: 5px;
+    }
+  
+    & input, label {
+        color:  rgba(0,0,0,.8);
+    }
+  
+    & header {
+        padding: 40px;
+    }
+}
+.set{
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0;
+        margin-left: 10%;
+        margin-right: 10%;
+        font-family: 'Source sans pro';
+        font-weight: bold;
+    }
+
+
+#foodItem, #calories{
+        width:400px;
+        height: 30px;
+        border: 3px solid #807182;
+}
+
+#submitbtn, #addmorebtn, #trackcalbtn{
+        width:250px;
+        height:40px;
+        align-content: center;
+        margin-left: 30%;
+        margin-right: 30%;
+        margin-bottom: 10%;
+        background-color: #21bfca;
+        color: white;
+        font-size: 15px;
+}

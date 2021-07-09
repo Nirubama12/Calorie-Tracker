@@ -29,23 +29,23 @@ $pw = $row['password'];
 $un = $row['username'];
 $role = $row['role'];
 
-if($pass == $pw)
+if(($pass == $pw))
 {
-    echo "<h2>correct password</h2>";
-}
-
-if($role == "User"){
+    if($role == "User"){
         session_start();
         $_SESSION['username'] = $un;
         $_SESSION['role'] = $row['role'];
         echo '<meta http-equiv= "refresh" content="1; url=/Calorie-Tracker/display-table.php"/>';
 }
-else if($role == "Nutritionist"){
+    else if($role == "Nutritionist"){
         session_start();
         $_SESSION['username'] = $un;
         $_SESSION['role'] = $row['role'];
         echo '<meta http-equiv= "refresh" content="1; url=/Calorie-Tracker/add-data.html"/>';
 }
+}
+
+
 
 
 

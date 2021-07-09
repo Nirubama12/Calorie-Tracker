@@ -1,8 +1,6 @@
 <?php
 
- 
-
-$server = "localhost";
+ $server = "localhost";
 $user = "root";
 $pass = "";
 $db = "test";
@@ -33,6 +31,6 @@ if(isset ($_POST['submit']))
         echo "Error: " . $sql . "<br>" . $conn->error;}
  }
 $conn->close();
-header("Location: https://localhost:4433/calorie-tracker/add-data.html");
+header("Location: add-data.html");
 exit();
 ?>

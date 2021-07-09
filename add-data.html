@@ -1,46 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>add data</title>
-
-    <style>
-      *{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    }
-
-    table,th,td{
-        background-color: rgb(236, 236, 236);
-        border-radius: 20px;
-        padding: 6px;
-        border-bottom: 30px;
-        border-right: 60px;
-    }
-    </style>
-
+    <title>>dd data</title>
+    <link rel="stylesheet" href="add-data.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@1&display=swap" rel="stylesheet">
 </head>
 <body>
-<form action="add-data.php" method="POST">
-    <table>
-        <tr>
-            <td><label for="foodItem">Name of the Food Item:</label></td>
-            <td><input type="text" id="foodItem" name="foodItem"></td>
-        </tr>
-        <br>
-        <br>
-        <tr>
-            <td><label for="calories">Calories per serving:</label></td>
-            <td><input type="number" id="calories" name="calories"></td>
-        </tr>
-        <br>
-        <br>
-        <tr>
-            <td><input type="submit" name="submit" id="submitbtn"/></td>
-        </tr>
-    </table>
-	
+<div class="signup-container">
+    <div class="left-container">
+    <h1 style="color: white; font-size:40px;">
+      <i class="fa fa-heartbeat"></i>
+      FITNESSIVE
+    </h1>
+    <div class="fitness">
+    <img src="4.jpg" style="height:80%; width:80%; margin-top: 20%;">
+    </div>
+    </div>
 
-</form>
+ 
+
+
+    <div class="right-container">
+    <header>
+    <h1 id="tagline">Thanks for helping us, Experts!</h1>
+    <div class="set">
+    <form action="add-data.php" method="POST">
+    <br><br>
+    <label for="foodItem">Name of the Food Item:</label><br>
+    <input type="text" id="foodItem" name="foodItem"><br><br><br>
+    <label for="calories">Calories per serving:</label><br>
+    <input type="number" id="calories" name="calories"><br><br><br>
+    <input type="submit" name="submit" id="submitbtn"/>
+    </form>
+    </div>
+    </header>
+    </div>
+    <br>
+   </div>
+<center><button id="trackcalbtn" onclick="window.location.href='https://localhost:4433/calorie-tracker/display-table.php'">
+    Track calories now!</button></center>
 </body>
 </html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>JS piechart</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <link rel="stylesheet" href="style_sheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Josefin+Sans&family=Lobster&family=Otomanopee+One&family=Zen+Loop&display=swap" rel="stylesheet">
+    
+</head>
+<body> 
+    <div class = "left">
+      <h2 style="background-color: #ffdbde; color: black; margin-left: 3px; text-align: center; font-family: 'lucida sans'"> Check how much each meal contribute to your calorie consumption</h2>
+      <div class = "table-box">
+    <table>
+      <tr>
+        <th colspan = "2"> What did you eat?</th>
+        <th> Calories consumed</th>
+    </tr>
+        <td> Meal 1:</td>
+        <td><input type = "text" id ="m1_name" name = "m1_name"></td>
+        <td><input type="number" id="m1" name="m1"  >
+       </td>
+        </tr>
+        <tr>
+          <td> Meal 2:</td>
+            <td><input type = "text" id ="m2_name" name = "m2_name"></td>
+            <td><input type="number" id="m2" name="m2"  >
+        </tr>
+        <tr>
+          <td> Meal 3:</td>
+            <td><input type = "text" id ="m3_name" name = "m3_name"></td>
+            <td><input type="number" id="m3" name="m3"  >
+        </tr>
+        <tr>
+          <td> Meal 4:</td>
+            <td><input type = "text" id ="m4_name" name = "m4_name"></td>
+            <td><input type="number" id="m4" name="m4"  >
+        </tr>
+        <tr>
+          <td> Meal 5:</td>
+            <td><input type = "text" id ="m5_name" name = "m5_name"></td>
+            <td><input type="number" id="m5" name="m5"  ></td>
+        </tr>
+        </table>
+      </div>
+        <br><br>
+        <button onclick = "display()"> Today's consumption </button>
+        </div>
+        <div class = "left" >
+    <canvas id="myChart" ></canvas><br>
+    <p style="background-color: #6384e1"> <a href = "calculators.html" style = "font-family: 'Montserrat'; background-color: #6384e1; color: white;"> Back </a></p>
+  </div>
+
+    <div class = "left" style= "height:100%;">
+     <p style = "font-size: x-large;font-family: 'Otomanopee One', sans-serif; color:black;"> EVERYTIME YOU EAT YOU ARE </p>
+      <p style = "font-size: 45px;font-family: 'Otomanopee One', sans-serif;color: black;" >FEEDING DISEASE</p>
+       <p style = "font-size: 45px;font-family: 'Otomanopee One', sans-serif;color: black;" >OR FIGHTING IT!  </p>
+       <p  style = "font-size: x-large;font-family: 'Otomanopee One', sans-serif;color:black;" >CHOOSE YOUR FOOD WISELY!</p>
+    </div>
+    
+
+   
+    <script>
+        function display(){
+
+        var M1 = document.getElementById("m1").value;
+        var M2 = document.getElementById("m2").value;
+        var M3 = document.getElementById("m3").value;
+        var M4 = document.getElementById("m4").value;
+        var M5 = document.getElementById("m5").value;
+
+        var M1_name = document.getElementById("m1_name").value;
+        var M2_name = document.getElementById("m2_name").value;
+        var M3_name = document.getElementById("m3_name").value;
+        var M4_name = document.getElementById("m4_name").value;
+        var M5_name = document.getElementById("m5_name").value;
+
+        var xValues = [M1_name,M2_name,M3_name,M4_name,M5_name,];
+        var yValues = [M1, M2, M3, M4, M5];
+        var barColors = [
+          "#373fa1",
+          "#9a589f",
+          "#fc9222",
+          "#58585b",
+          "#cd7893"
+        ];
+        
+        new Chart("myChart", {
+          type: "pie",
+          data: {
+            labels: xValues,
+            datasets: [{
+              backgroundColor: barColors,
+              data: yValues
+            }]
+          },
+          options: {
+            title: {
+              display: true,
+              text: "Calorie consumption per meal"
+            }
+          }
+        });
+    }
+        </script>
+</body>
+</html>

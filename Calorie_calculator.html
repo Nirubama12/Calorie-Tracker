@@ -6,29 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style_sheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Josefin+Sans&family=Lobster&family=Otomanopee+One&family=Zen+Loop&display=swap" rel="stylesheet">
 </head>
 <html>
     <body>
-      <div class ="main">
+      <div class ="main" style = "height:100%;">
         <h1> Calorie calculator</h1>
     <table>
         <td><label for = "gender">Gender:</label></td>
-        <td><input type="radio" id="male" name="gender" value="m">
-         Male 
-        <input type="radio" id="female" name="gender" value="f">
-         Female <br><br></td>
+        <td><input type="radio" id="male" name="male" value="m">
+          Male
+        <input type="radio" id="female" name="female" value="f">
+        Female
+         <br> 
+        </td>
         </tr>
         <tr>
         <td><label for="age">Age:</label></td>
-        <td><input type = "number" id ="age" name="age" > <br><br></td>
+        <td><input type = "number" id ="age" name="age" ></td>
         </tr>
         <tr>
         <td><label for="height">Height (in cm):</label></td>
-        <td><input type = "number" id ="height" name="height" > <br><br></td>
+        <td><input type = "number" id ="height" name="height" > </td>
         </tr>
         <tr>
         <td><label for="weight">Weight (in kg):</label></td>
-        <td><input type = "number" id ="weight" name="weight" > <br><br></td>
+        <td><input type = "number" id ="weight" name="weight" ></td>
         </tr>
         <tr>
             <td> <label for ="activity">Exercise level:</label></td>
@@ -43,15 +48,18 @@
               </select><br><br>
             </td>
           </tr>
+          <tr>
+            <td colspan = "2">
+                <button onclick = "calculate()"> calculate </button>
+            </td>
+        </tr>
         <tr>
         <td><label for="calorie"> Calorie consumption:</label></td>
-        <td><input type = "number" id ="calorie" name="calorie" > <br><br></td>
+        <td><input type = "number" id ="calorie" name="calorie"  > <br><br></td>
         </tr>
         
         </table>
-        <button onclick = "calculate()"> calculate </button>
-      
-        <p> <a href = "calculators.html"> Back </a></p>
+        <p> <a href = "calculators.html" style = "font-family: 'Lobster', cursive"> Back </a></p>
       </div>
         <script>
             function calculate()

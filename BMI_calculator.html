@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style_sheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Josefin+Sans&family=Lobster&family=Otomanopee+One&family=Zen+Loop&display=swap" rel="stylesheet">
 </head>
 <body>
     
@@ -13,28 +16,35 @@
         <h1> BMI Calculator</h1>
     
     <table>
-        <td><label for = "height">Height(in cm):</label></td>
-        <td><input type="number" id="height" name="height"  >
-        <br><br></td>
+       <td><label for = "height">Height(in cm):</label> 
+        </td><td><input type="number" id="height" name="height">
+        </td>
         </tr>
         <tr>
-        <td><label for="age">Weight(in kg):</label></td>
-        <td><input type = "number" id ="weight" name="weight" > <br><br></td>
+        <td><label for="age">Weight(in kg):</label>
+        </td><td><input type = "number" id ="weight" name="weight" > </td>
         </tr>
         <tr>
-        <td><label for="BMI">BMI:</label></td>
-        <td><input type = "number" id ="BMI" name="BMI" > <br><br></td>
+            <td colspan = "2">
+                <button onclick = "calculate()"> calculate </button>
+            </td>
+        </tr>
+        <tr>
+        <td><label for="BMI">BMI:</label></td><td > 
+         <input type = "number" id ="BMI" name="BMI" onkeydown="return false">  </td>
         </tr>
         </table>
-        <button onclick = "calculate()"> calculate </button>
+        
     
-        <p> <a href = "calculators.html"> Back </a></p>
-        <p> BMI Categories:<br>
-            Underweight = lesser than 18.5<br>
+        <p> <a href = "calculators.html" style = "font-family: 'Lobster', cursive;"> Back </a></p>
+        <div style = "border:mintcream; border-radius:5px;">
+        <p style = "font-size: large; text-align: center;"> BMI Categories<br></p>
+           <p style = "text-align: center; padding:5px;"> Underweight = lesser than 18.5<br>
             Normal weight = 18.5–24.9<br>
             Overweight = 25–29.9<br>
             Obesity = BMI of 30 or greater<br>
         </p>
+        </div>
     </div>
         <script>
             function calculate()

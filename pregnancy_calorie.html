@@ -6,39 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style_sheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Josefin+Sans&family=Lobster&family=Otomanopee+One&family=Zen+Loop&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class ="main">
-        <h1> Pregnancy Calculator</h1>
+    <div class ="main" style = "height:100%">
+        <h1> Pregnancy calorie calculator</h1>
     
     <table>
+        
         <td><label for = "height">Height(in cm):</label></td>
         <td><input type="number" id="height" name="height"  >
-        <br><br></td>
+        </td>
         </tr>
         <tr>
         <td><label for="age">Weight(in kg):</label></td>
-        <td><input type = "number" id ="weight" name="weight" > <br><br></td>
+        <td><input type = "number" id ="weight" name="weight" ></td>
+        </tr>
+        <br>
+        <tr>
+            <td colspan = "2">
+                <button onclick = "calculate()"> calculate </button>
+            </td>
         </tr>
         <tr>
-            <td colspan = "2" style = "font-size: large; padding-left:200px;" >Additional calorie consumption per day</td>
+            <td colspan = "2" style = "text-align: center; font-size:large;" >Additional calorie consumption per day</td>
         </tr>
         <tr>
         <td><label for="t1">Trimester 1:</label></td>
-        <td><input type = "text" id ="t1" name="t1" > <br><br></td>
+        <td><input type = "text" id ="t1" name="t1" onkeydown="return false"> </td>
         </tr>
         <tr>
         <td><label for="t2">Trimester 2:</label></td>
-        <td><input type = "text" id ="t2" name="t2" > <br><br></td>
+        <td><input type = "text" id ="t2" name="t2" onkeydown="return false" > </td>
         </tr>
         <tr>
         <td><label for="t3">Trimester 3:</label></td>
-        <td><input type = "text" id ="t3" name="t3" > <br><br></td>
+        <td><input type = "text" id ="t3" name="t3" onkeydown="return false"> </td>
         </tr>
         </table>
-        <button onclick = "calculate()"> calculate </button>
+       
     
-        <p> <a href = "calculators.html"> Back </a></p>
+        <p> <a href = "calculators.html" style = "font-family: 'Lobster', cursive; "> Back </a></p>
     </div>
         <script>
             function calculate()

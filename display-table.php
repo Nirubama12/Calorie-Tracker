@@ -11,7 +11,7 @@
 
 </head>
 <body>
-<a href="www.google.com" target="_blank" style="font-size:50px; margin-right: 2%;width:100%";><i class="fa fa-calculator" style="margin-left: 90%;"></i></a>
+<a href="calculators.html" target="_blank" style="font-size:50px; margin-right: 2%;width:100%";><i class="fa fa-calculator" style="margin-left: 90%;"></i></a>
 <div class="signup-container">
 
  

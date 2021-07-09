@@ -3,18 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style_sheet.css">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>BMI calculator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <!--<link rel="stylesheet" href="style_sheet.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Josefin+Sans&family=Lobster&family=Otomanopee+One&family=Zen+Loop&display=swap" rel="stylesheet">
+</head>-->
+<link rel="stylesheet" href="style_sheet.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital@1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!--<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Josefin+Sans&family=Lobster&family=Otomanopee+One&family=Zen+Loop&display=swap" rel="stylesheet">-->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
 </head>
+
 <body>
     
     <div class ="main">
         <h1> BMI Calculator</h1>
-    
+        <div class = "table-box">
     <table>
        <td><label for = "height">Height(in cm):</label> 
         </td><td><input type="number" id="height" name="height">
@@ -34,10 +45,9 @@
          <input type = "number" id ="BMI" name="BMI" onkeydown="return false">  </td>
         </tr>
         </table>
+        </div>
         
-    
-        <p> <a href = "calculators.html" style = "font-family: 'Lobster', cursive;"> Back </a></p>
-        <div style = "border:mintcream; border-radius:5px;">
+        <div class = "box">
         <p style = "font-size: large; text-align: center;"> BMI Categories<br></p>
            <p style = "text-align: center; padding:5px;"> Underweight = lesser than 18.5<br>
             Normal weight = 18.5–24.9<br>
@@ -45,6 +55,7 @@
             Obesity = BMI of 30 or greater<br>
         </p>
         </div>
+        <a href = "calculators.html" > Back </a></p>
     </div>
         <script>
             function calculate()

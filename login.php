@@ -35,13 +35,15 @@ if(($pass == $pw))
         session_start();
         $_SESSION['username'] = $un;
         $_SESSION['role'] = $row['role'];
-        echo '<meta http-equiv= "refresh" content="1; url=/Calorie-Tracker/display-table.php"/>';
+        //echo '<meta http-equiv= "refresh" content="1; url=/Calorie-Tracker/display-table.php"/>';
+        header("location: display-table.php");
 }
     else if($role == "Nutritionist"){
         session_start();
         $_SESSION['username'] = $un;
         $_SESSION['role'] = $row['role'];
-        echo '<meta http-equiv= "refresh" content="1; url=/Calorie-Tracker/add-data.html"/>';
+        //echo '<meta http-equiv= "refresh" content="1; url=/Calorie-Tracker/add-data.html"/>';
+        header("location: add-data.html");
 }
 }
 

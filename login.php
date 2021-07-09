@@ -10,9 +10,7 @@ if(!$link)
 {   
     echo "Connection Failed.".mysqli_error($link);
 }
-else{
-    echo "success";
-}
+
 
 $uname = $_POST["uname"];
 $pass = $_POST["pass"];
@@ -24,9 +22,7 @@ if(!$run)
 {
     echo "error".mysqli_error($link);
 }
-else{
-    echo "run success";
-}
+
 
 $row = mysqli_fetch_assoc($run);
 $pw = $row['password'];
@@ -37,9 +33,7 @@ if($pass == $pw)
 {
     echo "<h2>correct password</h2>";
 }
-/*else{
-    echo "Please enter the correct password.";
-}*/
+
 if($role == "User"){
         session_start();
         $_SESSION['username'] = $un;

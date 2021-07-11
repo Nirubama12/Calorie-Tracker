@@ -162,10 +162,10 @@
 
  
 
- function myDeleteFunction() {
+ /*function myDeleteFunction() {
    var x = document.getElementById("myTable").rows.length;
   document.getElementById("myTable").deleteRow(x);
-}
+}*/
 
  
 

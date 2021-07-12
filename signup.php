@@ -37,8 +37,13 @@ if(!$link)
 mysqli_close($link);
 ?>
 <html>
+    <head>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+
+    <link rel="stylesheet" href="signup.css"/>
+    </head>
     <body>
-        <button type="submit" onclick="location.href='ls.html'">Go to Login</button>
+        <button type="submit" id="sub" onclick="location.href='ls.html'">Go to Login</button>
     </body>
 </html>
 
